@@ -140,12 +140,13 @@
           position: absolute;
           background: rgb(15, 113, 179);
           height: 100vh;
-          width: 200px;
+          width: 0px;
           top: 0;
-          right: -200;
+          right: 0;
           text-align: left;
           z-index: 2;
           transition: 1s;
+          display: inline-block;
         }
         .nav-items {
           text-decoration: none;
@@ -197,10 +198,11 @@
     <script>
       var navLinks = document.getElementById("navLinks");
       function showMenu() {
-        navLinks.style.right = "0";
+        navLinks.style.width = "200";
+        
       }
       function hideMenu() {
-        navLinks.style.right = "-200px";
+        navLinks.style.width = "-0";
       }
     </script>
   </body>
