@@ -162,6 +162,7 @@
         #FaMenu{
           color:  rgb(15, 113, 179);
         }
+       
       }
     </style>
   </head>
@@ -170,8 +171,8 @@
       <nav>
         <a href="index.html"><img class="logo" src="logo-400x90.png" /></a>
         <div class="nav-links" id="navLinks">
-          <i class="fa fa-times" onclick="hideMenu()"></i>
-          <ul>
+          <i class="fa fa-times" id="fa-cross" onclick="hideMenu()"></i>
+          <ul id="nav-list">
             <li><a class="nav-items" href="">HOME</a></li>
             <li><a class="nav-items" href="">ABOUT</a></li>
             <li><a class="nav-items" href="">COURSE</a></li>
@@ -197,13 +198,18 @@
     </section>
     <script>
       var navLinks = document.getElementById("navLinks");
+      var navList = document.getElementById("nav-list");
+      var faCross = document.getElementById("fa-cross");
       function showMenu() {
         navLinks.style.width = "200";
-        
+        navList.style.display = "block";
+        faCross.style.display = "block";
       }
-      function hideMenu() {
+      function hideMenu()   {
         navLinks.style.width = "-0";
-      }
+        navList.style.display = "none";
+        faCross.style.display = "none"; 
+        }
     </script>
   </body>
 </html>
