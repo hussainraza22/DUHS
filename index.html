@@ -21,6 +21,13 @@
         padding: 0px;
         font-family: "Roboto", sans-serif;
       }
+      *,
+      *:before,
+      *:after {
+        padding: 0px;
+        margin: 0px;
+        box-sizing: border-box;
+      }
       .header {
         background-image: linear-gradient(
             rgba(0, 0, 0, 0.72),
@@ -157,13 +164,96 @@
       .course-col:hover{
        box-shadow:0 0 20px 0 rgba(0,0,0,0.5);
       }
+      .campus{
+        width: 80%;
+        margin: auto;
+        text-align: center;
+        padding-top: 50px;
+      }
       .campus-col{
-        flex-basis: 32%;
-        border-radius: 10px;
-        margin-bottom: 30px;
+        flex-basis:32%;
+        border-radius:10px;
+        margin-bottom:30px;
         position:relative;
         overflow:hidden;
-          
+      }
+      .campus-col img{
+        height:100%;
+        width: 100%;
+        border-radius: 10px;
+        display: block;
+      }
+      .layer{
+        background:transparent;
+        height: 100%;
+        width: 100%;
+        position:absolute;
+        top:0;
+        left: 0;
+        transition:0.5s;
+      }
+      .layer:hover{
+        background:rgba(14, 180, 64, 0.7) ;
+      }
+      .layer h3{
+        font-weight:500;
+        bottom: 0;
+        position:absolute;
+        left:50%;
+        width: 100%;
+        transform: translateX(-50%);
+        color: #fff;
+        opacity: 0;
+        transition: 0.5s;
+      }
+      .layer:hover h3{
+        opacity: 1;
+        bottom: 49%;
+      }
+      .facilities{
+        width: 80%;
+        margin: auto;
+        text-align: center;
+        padding-top: 50px;
+      }
+      .facilities-col{
+        flex-basis:32%;
+        border-radius:10px;
+        margin-bottom:30px;
+        text-align: left;
+      }
+      .facilities-col img{
+        width: 100%;
+        border-radius:10px;
+        height: 60%;
+      }
+      .facilities-col p{
+        padding: 0;
+      }
+      .facilities-col h3{
+        margin-top:16px;
+        margin-bottom: 15px;
+        text-align:left;
+      }
+      .skeleton{
+        animation: skeleton-loading 1s linear infinite alternate;
+      }
+      .skeleton-text{
+        border-radius: 125rem;
+      }
+      @keyframes skeleton-loading{
+        0%{
+          background-color: hsl(200, 20%, 70%);
+        }
+        100%{
+          background-color: hsl(200, 20%, 95%);
+        }
+      }
+      .testimonials{
+        width: 80%;
+        margin: auto;
+        text-align: center;
+        padding-top: 100px;
       }
 
       @media (max-width: 768px) {
@@ -172,6 +262,7 @@
         }
         .text-box h1 {
           font-size: 40px;
+           
         }
         .text-box p {
           font-size: 16px;
@@ -304,11 +395,58 @@
     
     <div class="row">
       <div class="campus-col">
-        <img src="img1.png"
-
+        <img src="img1.jpg">
+        <div class="layer">
+          <h3>OJHA</h3>
+        </div>
+      </div> <div class="campus-col">
+        <img src="duhs.png">
+        <div class="layer">
+          <h3>SADDAR</h3>
+        </div>
+      </div> <div class="campus-col">
+        <img src="img2.jpg">
+        <div class="layer">
+          <h3>DHA</h3>
+        </div>
       </div>
     </div>
     </section>
+
+    <section class="facilities">
+      <h1>Our Facilities</h1>
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elitLorem ipsum dolor sit amet, consectetur adipiscing elit</p>
+    <div class="row">
+    <div class="facilities-col">
+      <img src="img4.jpg">
+      <h3>World Class Library</h3>
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elitLorem ipsum dolor sit amet, consectetur adipiscing elit</p>
+  </div>
+  <div class="facilities-col">
+        <img src="img5.jpg">
+        <h3>Cafeteria</h3>
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elitLorem ipsum dolor sit amet, consectetur adipiscing elit</p>
+  </div>
+  
+  <div class="facilities-col ">
+          <img src="img6.jpg" class="skeleton"> 
+          <h3 class="skeleton skeleton-text">Gymnasium </h3>
+    <p class="skeleton skeleton-text">Lorem ipsum dolor sit amet, consectetur adipiscing elitLorem ipsum dolor sit amet, consectetur adipiscing elit</p>
+  </div>
+     </div>
+
+      </section>
+
+      <section class="testimonials">
+        <h1>What Our Students Says</h1>
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elitLorem ipsum dolor sit amet, consectetur adipiscing elit</p>
+        <div class="row">
+          <div class="testimonials-col">
+
+          </div>
+        </div>
+
+      </section>
     <script>
       var navLinks = document.getElementById("navLinks");
       var navList = document.getElementById("nav-list");
