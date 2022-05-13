@@ -1,0 +1,298 @@
+<html>
+  <head>
+    <title>DUHS</title>
+    <meta content="width=device-width, initial-scale=1" name="viewport" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+
+    <style>
+      * {
+        margin: 0px;
+        padding: 0px;
+        font-family: "Roboto", sans-serif;
+      }
+
+      nav {
+        display: flex;
+        padding: 1% 2%;
+        justify-content: space-between;
+        align-items: center;
+      }
+
+      nav img {
+        width: 320px;
+      }
+
+      .nav-links {
+        flex: 1;
+        text-align: right;
+      }
+
+      .nav-links ul li {
+        padding: 0 10 0 19px;
+        text-decoration: none;
+        list-style: none;
+        display: inline-block;
+        position: relative;
+      }
+      .nav-items {
+        text-decoration: none;
+        color: #fff;
+        text-shadow: 1px 1px 9px rgba(116, 8, 8, 0);
+        font-size: 14px;
+        font-weight: 600;
+      }
+      ul li::after {
+        content: "";
+        width: 0%;
+        height: 1.7px;
+        background: rgb(151, 189, 238);
+        display: block;
+        margin: auto;
+        transition: 0.4s;
+        border-radius: 50%;
+      }
+      ul li:hover::after {
+        width: 100%;
+      }
+      .about-col p {
+        margin: 10px 0px 40px;
+        font-size: 15px;
+        font-weight:50;
+      }
+      nav .fa {
+        display: none;
+      }
+      .footer {
+        width: 100%;
+        text-align: center;
+        padding: 30px 0;
+      }
+      .footer h4 {
+        margin-bottom: 25px;
+        margin-top: 20px;
+        font-weight: 600;
+        text-align: center;
+      }
+      .icons .fa {
+        color: rgb(151, 189, 238);
+        margin: 0 10px;
+        cursor: pointer;
+        padding: 7px 0;
+      }
+      .fa-heart-o {
+        color: rgb(151, 189, 238);
+      }
+      .sub-header {
+        height: 50vh;
+        width: 100%;
+        background-image: linear-gradient(
+            rgba(4, 9, 30, 0.7),
+            rgba(4, 9, 30, 0.7)
+          ),
+          url(img4.jpg);
+        background-position: center;
+        background-size: cover;
+        text-align: center;
+        color: #fff;
+        z-index: 5;
+      }
+      .sub-header h1 {
+        margin-top: 70px;
+      }
+      .container{
+        width:80%;
+        margin:auto;
+        padding-top: 80px;
+        padding-bottom: 50px;
+        display:flex;
+        justify-content: space-between;
+
+      }
+      .about-col{
+        flex-basis: 48%;
+        padding: 30px 2px;
+
+      }
+      .about-col img {
+        width: 100%;
+      }
+      p {
+        color: #777;
+        font-size: 13px;
+        font-weight: 300;
+        line-height: 22px;
+        padding: 10px;}
+
+      .about-col h1{
+        padding-top:0;
+      }
+      .about-col p{
+        padding:15 0 0 0;
+      }
+      .hero-btn {
+        display: inline-block;
+        text-decoration: none;
+        color: rgb(14, 180, 64);
+        border: 1px solid rgb(14, 180, 64);
+        border-radius: 20px;
+        padding: 12px 34px;
+        font-size: 13px;
+        background: transparent;
+        position: relative;
+        cursor: pointer;
+      }
+      .hero-btn:hover {
+        border: 1px solid rgb(14, 180, 64);
+        background: rgb(14, 180, 64);
+        transition: 1s;
+        color:#fff;
+      }
+      @media (max-width: 768px) {
+        #nav-list {
+          display: none;
+        }
+        .sub-header h1 {
+          font-size: 40px;
+          padding: 50px;
+        }
+        .text-box  p {
+          font-size: 16px;
+        }
+        .hero-btn {
+          font-size: 13px;
+        }
+        .logo {
+          width: 180px;
+        }
+        .nav-links ul li {
+          display: block;
+          padding: 25px;
+          text-align: center;
+        }
+        .nav-links {
+          position: absolute;
+          background: rgb(15, 113, 179);
+          height: 100vh;
+          width: 0px;
+          top: 0;
+          right: 0;
+          text-align: left;
+          z-index: 2;
+          transition: 1s;
+          display: inline-block;
+        }
+        .nav-items {
+          text-decoration: none;
+          color: rgb(255, 255, 255);
+          display: block;
+        }
+        nav .fa {
+          display: none;
+          margin: 10px;
+          color: rgb(255, 255, 255);
+          font-size: 22px;
+          cursor: pointer;
+        }
+        #FaMenu {
+          color: rgb(15, 113, 179);
+          display: inline-block;
+        }
+        .container {
+          flex-direction: column;
+        }
+        .testimonials-col img {
+          margin-right: 15px;
+          margin-left: 0px;
+        }
+        .CTA h1 {
+          font-size: 18px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <section class="sub-header">
+      <nav>
+        <a href="index.html"><img class="logo" src="logo-400x90.png" /></a>
+        <div class="nav-links" id="navLinks">
+          <i class="fa fa-times" id="fa-cross" onclick="hideMenu()"></i>
+          <ul id="nav-list">
+            <li><a class="nav-items" href="./index.html">HOME</a></li>
+            <li><a class="nav-items" href="">ABOUT</a></li>
+            <li><a class="nav-items" href="">COURSE</a></li>
+            <li><a class="nav-items" href="">BLOG</a></li>
+            <li><a class="nav-items" href="">CONTACT</a></li>
+          </ul>
+        </div>
+        <i class="Fa fa-bars" id="FaMenu" onclick="showMenu()"></i>
+      </nav>
+      <h1>About Us</h1>
+    </section>
+
+    <sectiom class="about-us">
+    <div class="container">
+      <div class="about-col">
+        <h1>World's Craziest University</h1>
+        <p>
+          The Dow University of Health Sciences (DUHS) offers a multitude of
+          undergraduate and postgraduate programs that caters to the needs in
+          healthcare sciences by providing quality human resources.The
+          University provides excellent academic facilities through its fully
+          equipped laboratories, museums, information technology, including
+          video conferencing, besides logistic facilities at the teaching
+          departments, hostels and the campuses in general.
+        </p>
+        <a class="hero-btn" href="">EXPLORE NOW</a>
+      </div>
+      <div class="about-col">
+        <img src="img4.jpg" />
+      </div>
+    </div>
+    </sectiom>
+    <section class="footer">
+      <h4>About Us</h4>
+      <p>
+        Lorem ipsum dolor sit amet, consectetur adipiscing elitLorem ipsum dolor
+        sit amet, consectetur adipiscing elitLorem ipsum dolor sit amet,
+        consectetur <br />
+        elitLorem ipsum dolor sit amet, consectetur adipiscing
+      </p>
+      <div class="icons">
+        <i class="fa fa-facebook"></i>
+        <i class="fa fa-twitter"></i>
+        <i class="fa fa-instagram"></i>
+        <i class="fa fa-linkedin"></i>
+        <p>Made by <i class="fa fa-heart-o"></i> Muhammad Hussain Raza</p>
+      </div>
+    </section>
+
+    <script>
+      var navLinks = document.getElementById("navLinks");
+      var navList = document.getElementById("nav-list");
+      var faCross = document.getElementById("fa-cross");
+      function showMenu() {
+        navLinks.style.width = "200";
+        navList.style.display = "block";
+        faCross.style.display = "block";
+      }
+      function hideMenu() {
+        navLinks.style.width = "-0";
+        setTimeout(function () {
+          navList.style.display = "none";
+          faCross.style.display = "none";
+        }, 500);
+      }
+    </script>
+  </body>
+</html>
