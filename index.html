@@ -14,7 +14,7 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
     />
-
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <style>
       * {
         margin: 0px;
@@ -306,6 +306,30 @@
       .fa-heart-o {
         color: rgb(151, 189, 238);
       }
+      .gotopbutton{
+  position: fixed;
+  width: 50px;
+  height: 50px;
+  background: #27ae60;
+  bottom: 40px;
+  right: 50px;
+  border-radius: 100%;
+  text-decoration: none;
+  text-align: center;
+  line-height: 50px;
+  color: white;
+  font-size: 50px;
+  cursor: pointer;
+}
+.visually-hidden {
+  clip: rect(0 0 0 0);
+  clip-path: inset(50%);
+  height: 1px;
+  overflow: hidden;
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
+}
       @media (max-width: 768px) {
         #nav-list {
           display: none;
@@ -570,7 +594,10 @@
         <i class="fa fa-instagram"></i>
         <i class="fa fa-linkedin"></i>
         <p>Made by <i class="fa fa-heart-o"></i> Muhammad Hussain Raza</p>
-      </div>
+      </div>  
+      <i class="fa fa-arrow-circle-o-up gotopbutton" id="gotopbutton" aria-hidden="true"></i>
+      <span class="visually-hidden">Go to the top of the page</span>
+
     </section>
 
     <script>
@@ -589,6 +616,14 @@
           faCross.style.display = "none";
         }, 500);
       }
+
+      const gotopbutton = document.querySelector("#gotopbutton");
+      gotopbutton.addEventListener("click",function () {
+       // window.scrollTo({top:0, behavior: "smooth"});//
+        
+        $("html, body").animate({ scrollTop: 0 }, "slow");//
+
+      });
     </script>
   </body>
 </html>
